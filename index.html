@@ -103,10 +103,42 @@
        <!-- Como o iframe foi gerado pelo proprio youtube decidi deixar assim mesmo, mesmo sendo considerado em erro por está obsoleto-->
    
     
-    <aside>
-        
-    </aside>
+       <section id="contact-form">
+        <h2>Contato</h2>
+        <form id="formContato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
 
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required><br>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="formStatus"></p>
+    </section>
+
+    <section id="subscribe-form">
+        <h2>Inscrição</h2>
+        <form id="formInscricao">
+            <label for="nomeInscricao">Nome:</label>
+            <input type="text" id="nomeInscricao" name="nomeInscricao" required><br>
+
+            <label for="emailInscricao">E-mail:</label>
+            <input type="email" id="emailInscricao" name="emailInscricao" required><br>
+
+            <button type="submit">Inscrever-se</button>
+        </form>
+        <p id="subscribeStatus"></p>
+    </section>
+</main>
+
+<script src="scripts.js"></script>
 </main>
 <footer>
     <p>Site criado por <a href="https://github.com/zeMatheusLira" target="_blank">Zé Matheus</a></p>
