@@ -30,13 +30,3 @@ window.onload = function() {
     alert('Bem-vindo ao site de VALORANT BRASIL!');
 }
 
-const images = document.querySelectorAll('.press img, .press1 img');
-images.forEach(image => {
-    image.addEventListener('mouseover', function() {
-        this.style.transform = 'scale(1.1)';
-        this.style.transition = 'transform 0.3s ease';
-    });
-    image.addEventListener('mouseout', function() {
-        this.style.transform = 'scale(1)';
-    });
-});

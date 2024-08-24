@@ -11,8 +11,8 @@
 :root{
     --cor0: #c5ebd6;
     --cor1: #f1f5f8;
-    --cor2: #3ddc84;
-    --cor3: #2fa866;
+    --cor2: #581d06;
+    --cor3: #ca0808;
     --cor4: #1a5c37;
     --cor5: #181818;
     --cor6: #080808;
@@ -32,6 +32,14 @@
 body{
     background-color: var(--cor6);
     font-family: var(--fonte-padrao);
+}
+
+/* Contêiner principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .image-fundo{
@@ -277,4 +285,248 @@ footer{
     background-color: var(--cor5);
     color: white;
 }
+
+/* Estilização dos botões de contato e inscrição */
+button {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: var(--fonte-padrao);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor3);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: var(--cor4);
+    transform: scale(1);
+}
+
+/* Estilização do contêiner dos formulários */
+form {
+    background-color: var(--cor1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Estilização dos rótulos */
+.form-label {
+    display: block;
+    font-weight: bold;
+    font-family: var(--fonte-padrao);
+    margin-bottom: 10px;
+    color: var(--cor6);
+}
+
+/* Estilização dos campos de entrada */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor3);
+    border-radius: 5px;
+    font-family: var(--fonte-padrao);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Estilização do campo de texto */
+textarea.form-input {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Estilização dos campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor3);
+    border-radius: 5px;
+    font-family: var(--fonte-padrao);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form button:hover {
+    background-color: var(--cor3);
+    transform: scale(1.05);
+}
+
+form button:active {
+    background-color: var(--cor5);
+    transform: scale(1);
+}
+
+/* Mensagens de status dos formulários */
+#formStatus, #subscribeStatus {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--cor4);
+    text-align: center;
+}
+
+/* Estilização Responsiva */
+
+@media only screen and (max-width: 1450px) {
+    
+    /* Responsividade do menu */
+    .bloco-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloco-menu li {
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.137); /* Transparência no background */
+        margin-bottom: 10px;
+    }
+
+    .bloco-menu li a {
+        padding: 2px;
+        display: block;
+        color: var(--cor1); /* Cor do texto */
+    }
+
+    /* Responsividade do campo de busca */
+    .buscar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Responsividade do formulário */
+    #contact-form, #subscribe-form {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .form-label {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Responsividade da imagem de fundo */
+    .image-fundo {
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .overlay {
+        height: auto;
+    }
+
+    /* Ajustes gerais */
+    .texto {
+        font-size: 24px;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .p1, .p2 {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Estilização para telas menores */
+@media only screen and (max-width: 480px) {
+
+    /* Ajustes adicionais no menu */
+    .bloco-menu nav ul {
+        padding: 0;
+    }
+
+    .bloco-menu nav ul li {
+        padding: 8px;
+    }
+
+    .texto {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .p1, .p2 {
+        font-size: 14px;
+    }
+
+    /* Responsividade da imagem de fundo */
+    .image-fundo {
+        height: 200px;
+    }
+}
+
+
+
+
 
