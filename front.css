@@ -382,6 +382,28 @@ form button:active {
     text-align: center;
 }
 
+/* Animação do formulário */
+#login-form, #cadastro-form {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease, transform 0.7s ease;
+}
+
+#login-form.visible, #cadastro-form.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação da mensagem de sucesso */
+#loginStatus, #cadastroStatus {
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+#loginStatus.visible, #cadastroStatus.visible {
+    opacity: 1;
+}
+
 /* Estilização Responsiva */
 
 @media only screen and (max-width: 1450px) {
@@ -525,10 +547,6 @@ form button:active {
         height: 200px;
     }
 }
-
-
-
-
 
 
 
